@@ -1,0 +1,9 @@
+{% load i18n %}
+
+    <h1>{% trans "Step1: create your admin account" %}</h1>
+
+    <form action={{ form_action }} method="post">
+	{% csrf_token %}
+	{{ form.as_p }}
+	<input type="submit" value="Create" />
+    </form>
